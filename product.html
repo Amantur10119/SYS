@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница товара</title>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+      function addToCart() {
+        alert('Товар добавлен в корзину!');
+      }
+    </script>
+</head>
+<body>
+    <div class="product-detail">
+        <div class="img-uniq">
+            <div class="product-image-large">
+                <img src="./assets/кровати/default.svg" alt="Кровать">
+            </div>
+            <a href="index.html" class="back-button">Назад к товарам</a>
+        </div>
+        <div class="desc-uniq">
+            <h3 class="poppins-medium"> Название: Bed</h3>
+            <p class="product-description poppins-light">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula, nibh quis aliquam
+                fermentum, sapien justo faucibus purus, eu facilisis libero felis ac erat. Vivamus eget
+                eleifend lacus, id fermentum magna.
+            </p>
+            <div class="price poppins-medium">$0.00</div>
+            <button class="add-to-cart-button" onclick="addToCart()">Добавить в корзину</button>
+        </div>
+    </div>
+    <script src="productData.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const params = new URLSearchParams(window.location.search);
+        const productId = params.get('id');
+
+        const products = [
+            { id: '1', name: 'Single Bed', description: 'Комфортный сон на вашей кровати Single Bed!<br><br>Идеальное решение для:<br><br>Небольших комнат: Компактная конструкция кровати Single Bed не займет много места, делая ее идеальной для небольших спален, гостевых комнат или комнат в общежитии.<br>Студентов и молодых людей: Стильный и современный дизайн кровати Single Bed идеально подходит для студентов и молодых людей, которые хотят создать стильное и функциональное пространство.<br>Детей: Прочная и надежная конструкция кровати Single Bed обеспечивает безопасность и комфорт для детей всех возрастов.', price: '294.00', image: './assets/кровати/single.svg' },
+            { id: '2', name: 'Green Bed', description: 'Окунитесь в атмосферу спокойствия и свежести с кроватью Green Bed!<br><br>Идеальное решение для тех, кто:<br><br>Ценит комфорт и здоровый сон: Мягкое изголовье и удобное основание кровати Green Bed обеспечат вам максимальный комфорт и поддержку во время сна.<br>Любит природу: Зеленый цвет кровати Green Bed символизирует свежесть, гармонию и единение с природой, создавая атмосферу спокойствия и умиротворения в вашей спальне.<br>Хочет стильный интерьер: Изысканный дизайн кровати Green Bed станет настоящим украшением вашей спальни и подчеркнет ваш вкус.', price: '284.00', image: './assets/кровати/green.svg' },
+            { id: '3', name: 'Black Bed', description: 'Описание для Black Bed', price: '364.00', image: './assets/кровати/black.svg' },
+            // Добавьте больше продуктов по мере необходимости
+        ];
+
+        const product = products.find(p => p.id === productId);
+        if (product) {
+            document.querySelector('.product-image-large img').src = product.image;
+            document.querySelector('.product-image-large img').alt = product.name;
+            document.querySelector('.product-detail h3').textContent = `Название: ${product.name}`;
+            document.querySelector('.product-detail .product-description').innerHTML = product.description;
+            document.querySelector('.product-detail .price').textContent = `$${product.price}`;
+        } else {
+            document.querySelector('.product-detail').innerHTML = '<p>Продукт не найден.</p>';
+        }
+    });
+    </script>
+</body>
+</html>

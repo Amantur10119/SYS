@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.barcelona-300 {
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.barcelona-400 {
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.container {
+    max-width: 1100px;
+    padding: 0 20px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.title {
+    color: #F4B5A4;
+}
+
+.поиск {
+    background-color: #F4B5A4;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.категория_кроватей_сверху {
+    margin-top: 24px;
+}
+
+.категория_кровати_все {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+.каждая_категория_кроватей {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.каждая_категория_кроватей:nth-child(2) {
+    justify-content: center;
+    border-right: 1px solid #F4B5A4;
+    border-left: 1px solid #F4B5A4;
+}
+
+.каждая_категория_кроватей:nth-child(3) {
+    justify-content: flex-end;
+}
+
+.каждая_категория_кроватей > a {
+    color: #DCBEB6;
+    text-decoration: none;
+    font-size: 16.24px;
+}
+
+.лист_кроватей {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.кровать {
+    width: 100%;
+}
+
+.описание > h3 {
+    font-size: 15px;
+}
+
+.описание > p {
+    padding: 8px 0;
+    font-size: 13px;
+    border-bottom: 0.5px solid rgba(244, 181, 164, 1);
+}
+
+.цена_конт {
+    display: flex;
+    padding: 8px 0;
+    justify-content: space-between;
+}
+
+.цена > strong {
+    font-size: 15px;
+    color: rgba(204, 120, 97, 1);
+}
+
+.избранные_корзина {
+    display: flex;
+    gap: 5px;
+}
+
+.избранные_корзина > button {
+    padding: 6px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    background-color: rgba(244, 181, 164, 1);
+    cursor: pointer;
+}
+
+.подробнее {
+    padding: 6px 10px;
+    border: none;
+    outline: none;
+    background-color: rgba(244, 181, 164, 1);
+    cursor: pointer;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 16px 30px;
+}
+
+.all_navigation {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+.all_navigation > li:nth-child(2) {
+    border-bottom: 1.61px solid #000;
+}
+
+.product-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.product-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.product-details {
+    flex: 1;
+}
+
+.product-details h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.product-details p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.product-price {
+    font-size: 20px;
+    color: rgba(204, 120, 97, 1);
+    margin-bottom: 20px;
+}
+
+.add-to-cart {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background-color: rgba(244, 181, 164, 1);
+    cursor: pointer;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Добавляем стили для страницы товара */
+
+.product-detail {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.img-uniq {
+    flex: 1;
+}
+
+.desc-uniq {
+    flex: 1;
+}
+
+.product-image-large img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.product-detail h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.product-detail .product-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.product-detail .price {
+    font-size: 20px;
+    color: rgba(204, 120, 97, 1);
+    margin-bottom: 20px;
+}
+
+.add-to-cart-button {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background-color: rgba(244, 181, 164, 1);
+    cursor: pointer;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+}
